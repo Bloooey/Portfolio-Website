@@ -5,24 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     <title>Andrew Lam Portfolio Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
 </head>
 
-<body>  
-    <header>
-        <div>
-            <img src="img/andrewface.png" alt="">
+<body>
+    <div class="parallax_wrapper">
+        <div class="parallax_group intro_screen" id="intro">
+            Parallax Intro Title
         </div>
-    </header>
+
+        <div class="parallax_group" id="group-1">
+            <div class="parallax_layer base_layer">
+                Base layer page
+            </div>
+            <div class="parallax_layer mid_layer">
+                Mid layer page
+            </div>
+        </div>
+
+        <div class="parallax_group" id="group-2">
+            <div class="parallax_layer mid_layer">
+                Mid layer page
+            </div>
+            <div class="parallax_layer top_layer">
+                Top layer page
+            </div>
+        </div>
+
+        <div class="parallax_group outro_screen" id="outro">
+            The End
+        </div>
+    </div>
 
 </body>
 
