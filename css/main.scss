@@ -9,11 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2em;
     color: white;
 
@@ -31,8 +30,7 @@ body {
             font-size: 1em;
             li {
                 margin: 10px;
-            resize: 200px;
-
+                resize: 200px;
             }
         }
 
@@ -44,25 +42,22 @@ body {
         .social_icon:hover {
             color: rgb(41, 40, 40);
         }
-    
+
         .intro_screen {
             height: 100vh;
             background-color: gray;
-            
+
             background-size: cover;
             flex-direction: column;
             @include align-center;
-
-        
         }
-    
+
         .outro_screen {
             height: 100vh;
             background-color: cyan;
             @include align-center;
         }
-    
-    
+
         .parallax_group {
             position: relative;
             height: 125vh;
@@ -72,25 +67,28 @@ body {
                 position: absolute;
                 inset: 0;
                 @include align-center;
-        
-                
             }
-
-            
 
             .intro_layer {
                 transform: translateZ(50px) scale(0.8) translateY(0px);
-
             }
 
             .intro_base_layer {
                 // transform: translateZ(200px) scale(0.4) translateY(-300px);
                 height: 100vh;
                 font-size: 2em;
-            }
-            
-            .base_layer{
+                flex-direction: column;
+                transform: translateY(-100px);
+                
+                .portrait img {
+                    width:  150px;
+                    border-radius: 50%;
+                }
 
+                
+            }
+
+            .base_layer {
                 // scale calculatrion: 1 + ((Z transform value * -2) / perspective)
                 transform: translateY(-100px) scale(1) translateZ(-285px) scale(2);
                 @include align-center;
@@ -99,7 +97,6 @@ body {
 
             .mid_layer {
                 transform: translateZ(0);
-
             }
 
             .top_layer {
@@ -107,31 +104,26 @@ body {
             }
         }
 
-        #intro{
+        #intro {
             z-index: 0;
         }
 
-    
-        #group-1{
+        #group-1 {
             z-index: -1;
         }
-    
+
         #group-1 > .base_layer {
             background-color: crimson;
         }
-    
-        #group-2{}
-    
+
+        #group-2 {
+        }
+
         #group-2 > .mid_layer {
             background-color: yellowgreen;
         }
-    
-        #outro{}
+
+        #outro {
+        }
+    }
 }
-}
-
-
-    
-
-
- 

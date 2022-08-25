@@ -67,6 +67,12 @@ body .parallax_wrapper .parallax_group .intro_layer {
 body .parallax_wrapper .parallax_group .intro_base_layer {
   height: 100vh;
   font-size: 2em;
+  flex-direction: column;
+  transform: translateY(-100px);
+}
+body .parallax_wrapper .parallax_group .intro_base_layer .portrait img {
+  width: 150px;
+  border-radius: 50%;
 }
 body .parallax_wrapper .parallax_group .base_layer {
   transform: translateY(-100px) scale(1) translateZ(-285px) scale(2);
