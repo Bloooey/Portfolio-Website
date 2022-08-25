@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    font-size: 4em;
+    font-size: 2em;
     color: white;
 
     .parallax_wrapper {
@@ -22,11 +22,38 @@ body {
         overflow-x: hidden;
         overflow-y: auto;
         perspective: 300px;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            position: relative;
+            top: 100px;
+            font-size: 1em;
+            li {
+                margin: 10px;
+            resize: 200px;
+
+            }
+        }
+
+        .social_icon {
+            color: lightgray;
+            transition: color 0.2s;
+        }
+
+        .social_icon:hover {
+            color: rgb(41, 40, 40);
+        }
     
         .intro_screen {
             height: 100vh;
-            background-color: tomato;
+            background-color: gray;
+            
+            background-size: cover;
+            flex-direction: column;
             @include align-center;
+
+        
         }
     
         .outro_screen {
@@ -38,7 +65,7 @@ body {
     
         .parallax_group {
             position: relative;
-            height: 100vh;
+            height: 125vh;
             transform-style: preserve-3d;
 
             .parallax_layer {
@@ -48,14 +75,31 @@ body {
         
                 
             }
+
+            
+
+            .intro_layer {
+                transform: translateZ(50px) scale(0.8) translateY(0px);
+
+            }
+
+            .intro_base_layer {
+                // transform: translateZ(200px) scale(0.4) translateY(-300px);
+                height: 100vh;
+                font-size: 2em;
+            }
             
             .base_layer{
+
                 // scale calculatrion: 1 + ((Z transform value * -2) / perspective)
-                transform: translateZ(-300px) scale(2);
+                transform: translateY(-100px) scale(1) translateZ(-285px) scale(2);
+                @include align-center;
+                font-size: 23px;
             }
 
             .mid_layer {
                 transform: translateZ(0);
+
             }
 
             .top_layer {
@@ -66,6 +110,7 @@ body {
         #intro{
             z-index: 0;
         }
+
     
         #group-1{
             z-index: -1;

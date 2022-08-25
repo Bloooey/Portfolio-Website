@@ -6,7 +6,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 4em;
+  font-size: 2em;
   color: white;
 }
 body .parallax_wrapper {
@@ -15,9 +15,29 @@ body .parallax_wrapper {
   overflow-y: auto;
   perspective: 300px;
 }
+body .parallax_wrapper ul {
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  top: 100px;
+  font-size: 1em;
+}
+body .parallax_wrapper ul li {
+  margin: 10px;
+  resize: 200px;
+}
+body .parallax_wrapper .social_icon {
+  color: lightgray;
+  transition: color 0.2s;
+}
+body .parallax_wrapper .social_icon:hover {
+  color: rgb(41, 40, 40);
+}
 body .parallax_wrapper .intro_screen {
   height: 100vh;
-  background-color: tomato;
+  background-color: gray;
+  background-size: cover;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +51,7 @@ body .parallax_wrapper .outro_screen {
 }
 body .parallax_wrapper .parallax_group {
   position: relative;
-  height: 100vh;
+  height: 125vh;
   transform-style: preserve-3d;
 }
 body .parallax_wrapper .parallax_group .parallax_layer {
@@ -41,8 +61,19 @@ body .parallax_wrapper .parallax_group .parallax_layer {
   justify-content: center;
   align-items: center;
 }
+body .parallax_wrapper .parallax_group .intro_layer {
+  transform: translateZ(50px) scale(0.8) translateY(0px);
+}
+body .parallax_wrapper .parallax_group .intro_base_layer {
+  height: 100vh;
+  font-size: 2em;
+}
 body .parallax_wrapper .parallax_group .base_layer {
-  transform: translateZ(-300px) scale(2);
+  transform: translateY(-100px) scale(1) translateZ(-285px) scale(2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
 }
 body .parallax_wrapper .parallax_group .mid_layer {
   transform: translateZ(0);
